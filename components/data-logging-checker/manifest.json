@@ -1,0 +1,19 @@
+{
+  "main": "pct-data-logging-checker.min.js",
+  "version": "2",
+  "sheetSettings": {
+    "defaultCols": 6,
+    "defaultRows": 6,
+    "minCols": 3,
+    "minRows": 3
+  },
+  "inputs": [
+    {
+      "key": "title",
+      "type": "String",
+      "label": "Title",
+      "placeholder": "Enter title text",
+      "translate": true
+    }
+  ]
+}

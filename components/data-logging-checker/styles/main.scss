@@ -1,0 +1,152 @@
+// !--- Main layout styles to enable the flexible, scrolling container ---!
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+// !--- Title's style ---!
+.component-title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+// !--- Table styles ---!
+
+// Scrollable container for the table
+.table-container {
+  flex: 1; // Allows the container to grow and shrink to fill available space
+  overflow-y: auto; // Adds a vertical scrollbar only when needed
+  min-height: 0; // Prevents a common flexbox overflow bug
+}
+
+// General table styles
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+// Styling for all table cells (headers and data)
+th,
+td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+// Specific styles for the table header
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+  position: sticky; // Makes the header stick to the top during scroll
+  top: 0;
+  z-index: 1; // Ensures header stays on top
+}
+
+// !--- Helper classes for text alignment ---!
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+// Added styles for the new hyperlink in the table
+td.monospace a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+td.monospace a:hover {
+  text-decoration: underline;
+}
+
+// !--- Dynamic row styles ---!
+
+// Zebra-striping for odd rows for better readability
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+// !--- Styles for the filter button and pop-up ---!
+
+// Wrapper for header content (text and button)
+.header-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-wrapper.right {
+  justify-content: flex-end;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.filter-btn:hover {
+  color: #007bff;
+}
+
+.filter-btn.active {
+  color: #007bff;
+}
+
+// !--- Pop-up menu styles ---!
+.sort-menu {
+  position: fixed; // Fixed position to avoid being clipped by the table
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  min-width: 160px;
+  padding: 4px;
+  border-radius: 4px;
+
+  // Helper class to align right-aligned menus
+  &.align-right {
+    transform: translateX(-100%);
+  }
+}
+
+// Options inside the pop-up menu
+.menu-option {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+
+  // Style for the currently selected option
+  &.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }
+}
