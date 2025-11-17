@@ -34,9 +34,11 @@ The **Data Logging Checker** can be used in different use cases, including the f
 
 - **Install** the Data Logging Checker component to your company from the marketplace.
 
+- Navigate to **Admin > Apps > Data Logging Checker**, click on the three dots and then click **“Enable”**.
+
 - Navigate to the **Studio** and add the component to your page.
 
-- (Optional) In the component settings, provide a **Title** (e.g., "Main Fleet Health").
+- (Optional) In the component settings, **provide a Title** (e.g., "Main Fleet Health").
 
 The details of the fleet will load immediately.
 
