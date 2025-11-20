@@ -1,11 +1,16 @@
 {
   "main": "pct-data-logging-checker.min.js",
-  "version": "2",
+  "version": "3",
   "sheetSettings": {
-    "defaultCols": 6,
-    "defaultRows": 6,
-    "minCols": 3,
-    "minRows": 3
+    "minCols": 1,
+    "minRows": 1
+  },
+  "cardSettings": {
+    "minHeight": 100
+  },
+  "reportSettings": {
+    "minCols": 1,
+    "minRows": 1
   },
   "inputs": [
     {
